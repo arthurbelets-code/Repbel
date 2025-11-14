@@ -1,9 +1,0 @@
-<launch>
-    <!-- Принимаем аргумент topic_name -->
-    <arg name="topic_name" default="new_topic" />
-
-    <!-- Запускаем C++ listener из roscpp_tutorials -->
-    <node name="listener_cpp" pkg="roscpp_tutorials" type="listener" output="screen">
-        <remap from="chatter" to="$(arg topic_name)" />
-    </node>
-</launch>
